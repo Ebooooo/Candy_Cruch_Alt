@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 194803019223151717}
   - component: {fileID: 2333624581930816721}
-  - component: {fileID: 8774276068946493321}
   m_Layer: 0
   m_Name: CircleGreen
   m_TagString: Untagged
@@ -85,19 +84,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8774276068946493321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2565731295235118947}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60d6cda66b6fdbe40abc7d2b430cdd70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Circle: {fileID: 2565731295235118947}
-  Board:
-  - {fileID: 2449771856406777538, guid: 1ca508f6e65e09f4c8c82109932b0a43, type: 3}
-  - {fileID: 8160436260352715654, guid: ddb1bbf0d9bbd5a4aa6f4048251a1dfa, type: 3}

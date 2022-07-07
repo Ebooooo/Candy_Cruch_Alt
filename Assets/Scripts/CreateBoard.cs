@@ -38,10 +38,10 @@ public class CreateBoard : MonoBehaviour
                 switch (jagged[y][x])
                 {
                     case grey:
-                    Instantiate(formgrey, new Vector2(x, -y), Quaternion.identity);
+                    Instantiate(formgrey, new Vector2(x - jagged.Length/2, y - jagged.Length/2), Quaternion.identity);
                     break;
                     case white:
-                    Instantiate(formwhite, new Vector2(x, -y), Quaternion.identity);
+                    Instantiate(formwhite, new Vector2(x - jagged.Length/2, y - jagged.Length/2), Quaternion.identity);
                     break;
                 }
             }
