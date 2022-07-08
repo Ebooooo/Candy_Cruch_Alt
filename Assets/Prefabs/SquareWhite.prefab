@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -545437085266316726}
   m_Layer: 0
   m_Name: SquareWhite
-  m_TagString: Untagged
+  m_TagString: Board
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,9 +103,11 @@ MonoBehaviour:
   - {fileID: 2565731295235118947, guid: 1a241ef0256ec7148ba546958b80cde3, type: 3}
   - {fileID: 863537395252756344, guid: 5defdf5c7f2d33641bd91826ddce22fc, type: 3}
   - {fileID: 3816933976131884828, guid: 31dddde1243f58040931e70f9eff627a, type: 3}
+  isCheck: {fileID: 0}
   isBlocked: 0
   blocked: 0
   empty: 0
+  spawner: 0
 --- !u!61 &-545437085266316726
 BoxCollider2D:
   m_ObjectHideFlags: 0

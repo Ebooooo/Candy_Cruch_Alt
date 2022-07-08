@@ -6,27 +6,31 @@ public class SquareCheck : SquareTangent
 {
     public GameObject squarePrefab, checkPrefab;
     public GameObject movementPrefab;
-    private GameObject innerSquareMove, outterSquareMove, tangentSquareMove;
+    public GameObject innerSquareMove, outterSquareMove, tangentSquareMove;
     public Vector4 innerSquare, outterSquare;
     public float tangentSquareRadius;
     public float degree;
+    public bool isChecking;
 
     void Start()
     {
-        innerSquareMove = (GameObject)Instantiate(squarePrefab);
-        outterSquareMove = (GameObject)Instantiate(squarePrefab);
-        tangentSquareMove = (GameObject)Instantiate(checkPrefab);
-        movementPrefab = (GameObject)Instantiate(movementPrefab);
-        outterSquare.w = 0.5f;
+        innerSquare.w = 0.5f;
+        outterSquare.w = 0.65f;
         tangentSquareRadius = 0.125f;
     }
 
 
     void Update()
     {
+        if(isChecking)
+        {
+            degree = degree + 1;
+        }
+        if(!isChecking)
+        {
+            degree = 0;
+        }
         GrowUp();
-        Check();
-        innerSquareMove.transform.position = new Vector2(innerSquare.x, innerSquare.y);
         innerSquareMove.transform.localScale = new Vector2(innerSquare.w, innerSquare.w) * 2;
         outterSquareMove.transform.position = new Vector2(movementPrefab.transform.position.x, movementPrefab.transform.position.y);
         outterSquareMove.transform.localScale = new Vector2(outterSquare.w, outterSquare.w) * 2;
@@ -43,11 +47,12 @@ public class SquareCheck : SquareTangent
             tangentSquareRadius = tangentSquareRadius + 0.25f;
         }
     }
-    public void Check()
+        public void pointerDown()
     {
-        if(Input.GetKey(KeyCode.T))
-        {
-            degree++;
-        }
+        isChecking = true;
+    }
+    public void pointerUP()
+    {
+        isChecking =false;
     }
 }

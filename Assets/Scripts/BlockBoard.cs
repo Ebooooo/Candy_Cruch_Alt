@@ -6,12 +6,16 @@ public class BlockBoard : MonoBehaviour
 {
     public SpriteRenderer sr;
     public GameObject[] colors;
+    public SquareCheck isCheck;
     public bool isBlocked;
     public bool blocked;
     public bool empty;
+    public bool spawner;
 
     void Start()
     {
+        isCheck = GameObject.Find("Squaremake").GetComponent<SquareCheck>();
+        spawner = false;
         empty = true;
         sr = GetComponent<SpriteRenderer>();
         isBlocked = false;
@@ -25,10 +29,25 @@ public class BlockBoard : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D other)
     {
-        if(other.tag == "check" && !isBlocked && empty)
+        if(other.tag == "spawner")
+        {
+            spawner = true;
+        }
+        if(other.tag == "check" && !isBlocked && empty && !spawner && isCheck.isChecking)
         {
             Instantiate(colors[UnityEngine.Random.Range(0,3)], this.transform.position, this.transform.rotation);
             empty = false;
+        }
+    }
+    void OnTriggerExit2D(Collider2D dot)
+    {
+        if(dot.tag == "spawner")
+        {
+            spawner = false;
+        }
+        if(dot.tag == "dotGreen" || dot.tag == "dotPink" || dot.tag == "dotRed" && !isBlocked)
+        {
+            empty = true;
         }
     }
 }
