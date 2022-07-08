@@ -5,12 +5,12 @@ using UnityEngine;
 public class CheckDotRed : MonoBehaviour
 {
     public bool markedToDestroy;
-    public bool clearClicked;
+    public bool readyToDestroy;
 
     public void Start()
     {
+        readyToDestroy = false;
         markedToDestroy = false;
-        clearClicked =false;
     }
 
     public void OnTriggerStay2D(Collider2D dotRed)
@@ -21,11 +21,18 @@ public class CheckDotRed : MonoBehaviour
         }
     }
     
-    public void pointerDown()
+    public void Update()
     {
-        if(markedToDestroy)
+        clickDown();
+        if(readyToDestroy && markedToDestroy)
+        Destroy(gameObject);
+    }
+
+    public void clickDown()
+    {
+        if(Input.GetKey(KeyCode.E))
         {
-            Destroy(gameObject);
+       readyToDestroy = true;
         }
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class CheckDotGreen : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class CheckDotGreen : MonoBehaviour
 
     public void Start()
     {
+        readyToDestroy = false;
         markedToDestroy = false;
     }
 
@@ -22,18 +24,17 @@ public class CheckDotGreen : MonoBehaviour
     
     public void Update()
     {
+        clickDown();
         if(readyToDestroy && markedToDestroy)
         Destroy(gameObject);
     }
 
-    public void pointerDown()
+    public void clickDown()
     {
-       Debug.Log("e dzialasz?");
+        if(Input.GetKey(KeyCode.E))
+        {
        readyToDestroy = true;
+        }
     }
-    public void pointerUp()
-    {
-       Debug.Log("e dzialaddddsz?");
-       readyToDestroy = false;
-    }
+
 }

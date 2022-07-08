@@ -161,7 +161,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -187.5, y: -168.8}
+  m_AnchoredPosition: {x: -187.5, y: -241}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &38252134
@@ -183,7 +183,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: -8428448851686150495, guid: 1a241ef0256ec7148ba546958b80cde3, type: 3}
           m_TargetAssemblyTypeName: CheckDotGreen, Assembly-CSharp
-          m_MethodName: pointerUp
+          m_MethodName: OnPointerUp
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -199,7 +199,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: -8428448851686150495, guid: 1a241ef0256ec7148ba546958b80cde3, type: 3}
           m_TargetAssemblyTypeName: CheckDotGreen, Assembly-CSharp
-          m_MethodName: pointerDown
+          m_MethodName: clickDown
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1462,7 +1462,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Spawn
+  m_Text: Clear
 --- !u!222 &1419213877
 CanvasRenderer:
   m_ObjectHideFlags: 0

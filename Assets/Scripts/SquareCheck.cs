@@ -49,7 +49,7 @@ public class SquareCheck : SquareTangent
             tangentSquareRadius = tangentSquareRadius + 0.25f;
         }
     }
-        public void pointerDown()
+    public void pointerDown()
     {
         isChecking = true;
     }
