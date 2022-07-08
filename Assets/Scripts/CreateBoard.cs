@@ -30,7 +30,7 @@ public class CreateBoard : MonoBehaviour
 
     void Start()
     {
-        string[][] jagged = readFile("G:/UnityProjects/Zadanie_Cherry/Assets/Board/board.txt");
+        string[][] jagged = readFile("Assets/Board/board.txt");
         for (int y = 0; y < jagged.Length; y++)
         {
             for (int x = 0; x < jagged.Length; x++)
