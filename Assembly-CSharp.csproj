@@ -36,16 +36,17 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\ClickToCreate.cs" />
      <Compile Include="Assets\Scripts\BlockBoard.cs" />
      <Compile Include="Assets\Scripts\SquareTangent.cs" />
+     <Compile Include="Assets\Scripts\DragDrop.cs" />
+     <Compile Include="Assets\Scripts\CheckDotPink.cs" />
      <Compile Include="Assets\Scripts\CreateBoard.cs" />
-     <Compile Include="Assets\Scripts\SquareCheck.cs" />
-     <Compile Include="Assets\Scripts\ClickToCreate.cs" />
+     <Compile Include="Assets\Scripts\CheckDotGreen.cs" />
      <Compile Include="Assets\Scripts\ClearDots.cs" />
      <Compile Include="Assets\Scripts\CheckDotRed.cs" />
-     <Compile Include="Assets\Scripts\CheckDotPink.cs" />
-     <Compile Include="Assets\Scripts\CheckDotGreen.cs" />
-     <Compile Include="Assets\Scripts\DragDrop.cs" />
+     <Compile Include="Assets\Scripts\SquareCheck.cs" />
+     <Compile Include="Assets\Scripts\CameraDrag.cs" />
      <None Include="Assets\Board\board.txt" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\2021.3.3f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
