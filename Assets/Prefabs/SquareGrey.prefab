@@ -103,6 +103,7 @@ MonoBehaviour:
   - {fileID: 2565731295235118947, guid: 1a241ef0256ec7148ba546958b80cde3, type: 3}
   - {fileID: 863537395252756344, guid: 5defdf5c7f2d33641bd91826ddce22fc, type: 3}
   - {fileID: 3816933976131884828, guid: 31dddde1243f58040931e70f9eff627a, type: 3}
+  spawnerPoint: {fileID: 2073264168955759953, guid: 89334b6d5ee2b4e4b98468974946061f, type: 3}
   isCheck: {fileID: 0}
   isBlocked: 0
   blocked: 0

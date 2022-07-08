@@ -29,6 +29,8 @@ public class SquareCheck : SquareTangent
         if(!isChecking)
         {
             degree = 0;
+            outterSquare.w = 0.65f;
+            tangentSquareRadius = 0.125f;
         }
         GrowUp();
         innerSquareMove.transform.localScale = new Vector2(innerSquare.w, innerSquare.w) * 2;

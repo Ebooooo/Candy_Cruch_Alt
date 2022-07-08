@@ -12,6 +12,9 @@ TagManager:
   - spawner
   - Board
   - BoardBlocked
+  - ClearCheckerGreen
+  - ClearCheckerRed
+  - ClearCheckerPink
   layers:
   - Default
   - TransparentFX

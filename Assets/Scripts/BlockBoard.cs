@@ -6,6 +6,7 @@ public class BlockBoard : MonoBehaviour
 {
     public SpriteRenderer sr;
     public GameObject[] colors;
+    public GameObject spawnerPoint;
     public SquareCheck isCheck;
     public bool isBlocked;
     public bool blocked;
@@ -30,6 +31,10 @@ public class BlockBoard : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D other)
     {
+        if(other.tag == "dotGreen" || other.tag == "dotPink" || other.tag == "dotRed")
+        {
+            empty = false;
+        }
         if(other.tag == "spawner")
         {
             spawner = true;

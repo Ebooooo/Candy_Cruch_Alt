@@ -5,17 +5,27 @@ using UnityEngine;
 public class CheckDotPink : MonoBehaviour
 {
     public bool markedToDestroy;
+    public bool clearClicked;
 
     public void Start()
     {
         markedToDestroy = false;
+        clearClicked =false;
     }
 
-    public void OnTriggerStay2D(Collider2D dotRed)
+    public void OnTriggerStay2D(Collider2D dotPink)
     {
-        if(dotRed.tag == "dotPink")
+        if(dotPink.tag == "ClearCheckerPink")
         {
             markedToDestroy = true;
+        }
+    }
+    
+    public void pointerDown()
+    {
+        if(markedToDestroy)
+        {
+            Destroy(gameObject);
         }
     }
 }

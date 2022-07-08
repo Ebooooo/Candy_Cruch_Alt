@@ -15,7 +15,7 @@ public class CheckDotRed : MonoBehaviour
 
     public void OnTriggerStay2D(Collider2D dotRed)
     {
-        if(dotRed.tag == "dotRed")
+        if(dotRed.tag == "ClearCheckerRed")
         {
             markedToDestroy = true;
         }

@@ -5,35 +5,35 @@ using UnityEngine;
 public class CheckDotGreen : MonoBehaviour
 {
     public bool markedToDestroy;
-    public bool clearClicked;
+    public bool readyToDestroy;
 
     public void Start()
     {
         markedToDestroy = false;
     }
 
-    public void OnTriggerStay2D(Collider2D dotRed)
+    public void OnTriggerStay2D(Collider2D dotGreen)
     {
-        if(dotRed.tag == "dotGreen")
+        if(dotGreen.tag == "ClearCheckerGreen")
         {
             markedToDestroy = true;
         }
     }
     
-        public void pointerDown()
-    {
-        clearClicked = true;
-    }
-    public void pointerUP()
-    {
-        clearClicked =false;
-    }
     public void Update()
     {
-        if(markedToDestroy && clearClicked)
-        {
+        if(readyToDestroy && markedToDestroy)
         Destroy(gameObject);
-        Debug.Log("halogreen?");
-        }
+    }
+
+    public void pointerDown()
+    {
+       Debug.Log("e dzialasz?");
+       readyToDestroy = true;
+    }
+    public void pointerUp()
+    {
+       Debug.Log("e dzialaddddsz?");
+       readyToDestroy = false;
     }
 }
