@@ -378,10 +378,9 @@
 "Assets/Scripts/CheckDotGreen.cs"
 "Assets/Scripts/CheckDotPink.cs"
 "Assets/Scripts/CheckDotRed.cs"
-"Assets/Scripts/ClearDots.cs"
-"Assets/Scripts/ClickToCreate.cs"
 "Assets/Scripts/CreateBoard.cs"
 "Assets/Scripts/DragDrop.cs"
+"Assets/Scripts/FPS.cs"
 "Assets/Scripts/SquareCheck.cs"
 "Assets/Scripts/SquareTangent.cs"
 -langversion:9.0

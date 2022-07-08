@@ -23,18 +23,9 @@ public class CheckDotRed : MonoBehaviour
     
     public void pointerDown()
     {
-        clearClicked = true;
-    }
-    public void pointerUP()
-    {
-        clearClicked =false;
-    }
-    public void Update()
-    {
-        if(markedToDestroy && clearClicked)
+        if(markedToDestroy)
         {
-        Destroy(gameObject);
-        Debug.Log("halored?");
+            Destroy(gameObject);
         }
     }
 }

@@ -6,9 +6,15 @@ using UnityEngine.EventSystems;
 public class DragDrop : MonoBehaviour
 {
     public GameObject spawner;
+    public bool drag;
 
+    void OnMouseUp()
+    {
+        drag = false;
+    }
     void OnMouseDrag()
     {
+        drag = true;
         transform.position = GetMousePos();
     }
 

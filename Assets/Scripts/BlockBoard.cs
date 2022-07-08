@@ -24,6 +24,7 @@ public class BlockBoard : MonoBehaviour
         {
             isBlocked = true;
             sr.color = new Color(0f, 0f, 0f);
+            transform.gameObject.tag = "BoardBlocked";
         }
     }
 

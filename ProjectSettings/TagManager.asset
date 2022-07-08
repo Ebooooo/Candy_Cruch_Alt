@@ -11,6 +11,7 @@ TagManager:
   - dotPink
   - spawner
   - Board
+  - BoardBlocked
   layers:
   - Default
   - TransparentFX
